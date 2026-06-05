@@ -1,0 +1,81 @@
+/* Zwart scherm loadscreen */
+.loader {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    color: #fff;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transition: .6s ease;
+}
+
+/* Verbergt het zwarte scherm als de website geladen is */
+
+.loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Geeft een 3D-effect aan de naam */
+.name-wrap {
+    perspective: 1000px;
+}
+
+/* Naam in het midden van het scherm */
+
+.name {
+    font-size: clamp(70px, 8vw, 130px);
+    font-weight: 700;
+    transform-style: preserve-3d;
+}
+
+/* Arabische versie naam  */
+
+.arabic {
+    font-family: 'Amiri', serif;
+}
+
+/* Nederlandse versie naam  */
+
+.latin {
+    display: none;
+    letter-spacing: -4px;
+}
+
+/* Start de draai-animatie */
+
+.flip {
+    animation: flip .9s ease;
+}
+
+/* Laat de naam omdraaien */
+@keyframes flip {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+/* Groot nummer rechtsonder */
+.counter {
+    position: absolute;
+    right: 60px;
+    bottom: 50px;
+
+    font-size: clamp(120px, 15vw, 250px);
+    font-weight: 300;
+    line-height: 1;
+}
