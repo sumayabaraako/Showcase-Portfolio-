@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+    font-family:'Inter', sans-serif;
+    background:#f7f7f5;
+    color:#050505;
+    overflow:hidden;
+}
+
 /* Zwart scherm loadscreen */
 .loader {
     position: fixed;
@@ -79,3 +98,150 @@
     font-weight: 300;
     line-height: 1;
 }
+
+
+
+/* SITE */
+
+.site{
+    min-height:100vh;
+    opacity:0;
+    transition:.2s ease;
+}
+
+.site.show{
+    opacity:1;
+}
+
+/* HEADER */
+
+.top-header{
+    height:70px;
+    width:100%;
+
+    display:grid;
+    grid-template-columns:150px 1fr 190px;
+    align-items:center;
+
+    border-bottom:1px solid #111;
+    background:#f7f7f5;
+}
+
+.brand{
+    height:100%;
+    display:flex;
+    align-items:center;
+    padding-left:22px;
+
+    font-size:27px;
+    font-weight:400;
+      font-family:'Inter', sans-serif;
+
+
+    border-right:1px solid #111;
+}
+
+.menu{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:32px;
+}
+
+.menu a{
+    color:#111;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:400;
+}
+
+.contact-btn{
+    justify-self:center;
+
+    padding:12px 25px;
+    border:1px solid #111;
+    border-radius:999px;
+
+    color:#777;
+    background:transparent;
+
+    text-decoration:none;
+    font-size:11px;
+    font-weight:700;
+
+    transition:.3s ease;
+}
+
+.contact-btn:hover{
+    background:black;
+    border-color:black;
+    color:#fff;
+}
+
+/* HERO */
+
+.hero{
+    height:calc(100vh - 70px);
+    display:grid;
+    grid-template-columns:54.5% 45.5%;
+}
+
+.hero-left{
+    position:relative;
+    padding:60px 20px;
+    border-right:1px solid #111;
+}
+
+.role{
+    font-size:18px;
+    font-weight:200;
+    line-height:1.55;
+}
+
+.hero-title{
+    position:absolute;
+    left:88px;
+    bottom:215px;
+
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:clamp(78px, 8vw, 125px);
+    font-weight:600;
+    line-height:.9;
+    letter-spacing:-3px;
+}
+
+.hero-title span{
+    display:block;
+    opacity:0;
+    transform:translateY(70px);
+}
+
+.site.show .hero-title span{
+    animation:titleIn .9s ease forwards;
+}
+
+.site.show .hero-title span:nth-child(2){
+    animation-delay:.15s;
+}
+
+@keyframes titleIn{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-right{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.hero-right img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
