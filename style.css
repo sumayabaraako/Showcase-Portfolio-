@@ -241,3 +241,32 @@ body{
     padding-top: 50px;
 }
 
+/* SELECTED WORK */
+
+.selected-work{
+    position:relative;
+    min-height:760px;
+    padding:140px 8vw 160px;
+    background:#f7f7f5;
+    overflow:hidden;
+}
+
+.work-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:70px;
+}
+
+.section-label{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.08em;
+}
+
+.work-heading a{
+    color:#111;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:600;
+}
