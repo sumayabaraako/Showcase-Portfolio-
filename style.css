@@ -270,3 +270,45 @@ body{
     font-size:12px;
     font-weight:600;
 }
+
+.work-list{
+    position:relative;
+    z-index:5;
+    display:flex;
+    flex-direction:column;
+    gap:70px;
+    width:58%;
+}
+
+.work-item{
+    position:relative;
+    display:grid;
+    grid-template-columns:70px 1fr;
+    align-items:start;
+    color:#2E2E2E;
+    text-decoration:none;
+    transition:.45s ease;
+}
+
+.work-number{
+    font-size:18px;
+    font-weight:500;
+    line-height:1;
+    opacity:.45;
+    padding-top:14px;
+}
+
+.work-content{
+    position:relative;
+    z-index:5;
+}
+
+.work-item h3{
+    font-size:clamp(44px,5vw,90px);
+    font-weight:500;
+    line-height:.95;
+    letter-spacing:-4px;
+    transition:.4s ease;
+}
+
+
