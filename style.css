@@ -395,3 +395,28 @@ body{
     letter-spacing:-5px;
     color:#fff;
 }
+
+.footer-links{
+    display:flex;
+    gap:18px;
+    margin-top:70px;
+}
+
+.footer-links a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 28px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;
+    color:#fff;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:500;
+    transition:.3s ease;
+}
+
+.footer-links a:hover{
+    background:#fff;
+    color:#050505;
+}
