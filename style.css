@@ -311,4 +311,22 @@ body{
     transition:.4s ease;
 }
 
+/* HOVER EFFECTs */
+.work-item:hover{
+    transform:translateX(20px);
+}
 
+.work-item p{
+    margin-top:15px;
+    font-size:14px;
+    font-weight:400;
+    letter-spacing:-.2px;
+    opacity:0;
+    transform:translateY(10px);
+    transition:.4s ease;
+}
+
+.work-item:hover p{
+    opacity:.75;
+    transform:translateY(0);
+}
